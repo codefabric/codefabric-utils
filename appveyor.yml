@@ -3,6 +3,7 @@ os: Visual Studio 2015 RC
 install:
  - dnvm upgrade
  - npm install gulp bower -global
+ - dnu restore
 build_script:
  - npm install
  - gulp build
