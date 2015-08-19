@@ -1,0 +1,57 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+       // "--no-color"
+    ],
+    "tasks": [
+        {
+            "taskName": "build",
+            "args": [],
+            "isBuildCommand": true,
+            "isWatching": false,
+            "problemMatcher": [
+                "$lessCompile",
+                "$tsc",
+                "$jshint",
+                "$msCompile"
+            ]
+        },
+        {
+            "taskName": "test",
+            "args": [],
+            "isTestCommand": true,
+            "problemMatcher": [
+                {
+                    "owner": "test",
+                     "fileLocation": ["absolute"],
+                     "pattern": [
+                        {
+                            "regexp": "^(Error).+dnx (.+) test$",
+                            "file": 2,
+                            "severity": 1
+                        },
+                        {
+                            "regexp": "^(.+ [FAIL])|events.js:(\\d+)$",
+                            "message": 1,
+                            "line": 2,
+                            "loop": true
+                        }
+                     ]
+                }
+            ]
+        },
+        {
+            "taskName": "watch",
+            "args": [],
+            "isWatching": true,
+            "problemMatcher": [
+                "$lessCompile",
+                "$tsc",
+                "$jshint",
+                "$msCompile"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+	"projects": [
+		"codefabric.utils",
+		"codefabric.utils.tests"
+	]
+}
