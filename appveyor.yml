@@ -4,8 +4,9 @@ build_script:
  - dnvm upgrade
  - dnu restore
  - dnu build codefabric.utils/project.json --quiet
+ - dnu build codefabric.utils.tests/project.json --quiet
 artifacts:
  - path: /bin 
    name: bin 
 test_script:
- - dnx codefabric.utils/project.json test -parallel none
+ - dnx codefabric.utils.tests/project.json test -parallel none
