@@ -1,0 +1,11 @@
+version: 1.0.{build} 
+os: Visual Studio 2015 RC 
+build_script:
+ - dnvm upgrade
+ - dnu restore
+ - dnu build C:\projects\codefabric-utils\project.json --quiet
+artifacts:
+ - path: /bin 
+   name: bin 
+test_script:
+ - dnx C:\projects\codefabric-utils\project.json test -parallel none
