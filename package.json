@@ -1,0 +1,7 @@
+{
+  "name": "codefabric-utils",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-run": "^1.6.10"
+  }
+}
